@@ -7,7 +7,13 @@ st.title("Retail Business Dashboard")
 st.header("Manager Input Section")
 st.write("Please enter the monthly sales target and select the region.")
 
-option = st.selectbox("Enter Monthly Sales Target (in USD)",
-                      ["Red", "Blue", "Green"])
+age = st.number_input("Enter Monthly Sales Target (in USD):",
+                      min_value=0,
+                      max_value=10000000,
+                      value=25)
+st.write(f"Your age is {age}")
+
+option = st.selectbox("Select Region:",
+                      ["North", "East", "South", "West"])
 st.write(f"You selected: {option}")
 
